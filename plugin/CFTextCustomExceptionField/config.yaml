@@ -1,0 +1,18 @@
+id: CFTextCustomExceptionField
+key: cftextcustomexceptionfield
+name: ContactForm Text(Custom-Exception) Field
+version: 0.1
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+description: <__trans phrase="Add a Text(Custom-Exception) Field for ContactForm.">
+l10n_class: CFTextCustomExceptionField::L10N
+contactform_objects:
+    text_custom_exception:
+        order: 1600
+        name: Text(Custom-Exception)
+        template_type: text_custom_exception
+        validate: $cftextcustomexceptionfield::CFTextCustomExceptionField::Plugin::_validate_text_custom_exception
+callbacks:
+    template_param.edit_contactform: $cftextcustomexceptionfield::CFTextCustomExceptionField::Plugin::_cb_tp_edit_contactform
+
+# TODO::PHP
